@@ -86,7 +86,7 @@ function esDiezOCinco(numero) {
   // Devuelve "true" si "numero" es 10 o 5
   // De lo contrario, devuelve "false"
   // Tu código:
-  if (numero == 10 || numero == 5){
+  if(numero===10 || numero ===5){
     return true;
   }
   else{
@@ -98,7 +98,7 @@ function estaEnRango(numero) {
   // Devuelve "true" si "numero" es menor que 50 y mayor que 20
   // De lo contrario, devuelve "false"
   // Tu código:
-  if (numero < 50 && numero > 20){
+  if(numero<50 && numero>20){
     return true;
   }
   else{
@@ -114,7 +114,7 @@ function esEntero(numero) {
   // De lo contrario, devuelve "false"
   // Pista: Puedes resolver esto usando `Math.floor`
   // Tu código:
-  if (numero == Math.floor(numero)){
+  if (numero === Math.floor(numero)){
     return true;
   }
   else{
@@ -171,18 +171,13 @@ function esPrimo(numero) {
   // Pista: un número primo solo es divisible por sí mismo y por 1
   // Pista 2: Puedes resolverlo usando un bucle `for`
   // Nota: Los números 0 y 1 NO son considerados números primos
-  if( numero < 2) return false;
-  if(numero === 2) return true;
-  var contador = 0;
+  if(numero < 2) return false;
+  if(numero === 2) return true;//excepción que confirma el correcto funcionamiento
   for(var i=2; i<numero; i++){
     if(numero % i == 0){
-      contador++;
+      // 2    % 2 ok 
+      return false;
     }
-  }
-  if(contador != 0){
-    return false;
-  }
-  else{
     return true;
   }
 }
