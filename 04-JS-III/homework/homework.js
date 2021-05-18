@@ -215,7 +215,11 @@ function mesesDelAño(array) {
   }
   else{
     var newArray = [];
-    newArray.push("Enero","Marzo","Noviembre");
+    for(var i=0; i < array.length; i++){
+      if(array[i]==="Enero" || array[i]==="Marzo" || array[i]==="Noviembre"){
+        newArray.push(array[i]);
+      }
+    }
     return newArray;
   }
 }
@@ -262,6 +266,8 @@ function continueStatement(numero) {
   //Cuando el número de iteraciones alcance el valor 5, no se suma en ese caso y se continua con la siguiente iteración
   //Pista: usá el statement 'continue'
   // Tu código:
+
+
 }
 
 
