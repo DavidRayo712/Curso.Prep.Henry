@@ -250,12 +250,17 @@ function breakStatement(numero) {
   var array = [];
   for(var i = 0; i < 10 ; i++){
     array[i] = numero + 2;
-    if((numero + 2) == i){
+    if((array[i]) == (i+1)){
       break;
     }
-    return "Se interrumpió la ejecución";
+    else{
+      
+    }
+    // return "Se interrumpió la ejecución";
   }
   return array;
+  return "Se interrumpió la ejecución";
+
 }
 
 
@@ -266,8 +271,18 @@ function continueStatement(numero) {
   //Cuando el número de iteraciones alcance el valor 5, no se suma en ese caso y se continua con la siguiente iteración
   //Pista: usá el statement 'continue'
   // Tu código:
-
-
+  var miArray=[];
+  for(var i=0 ; i<10 ; i++){
+    if(i != 4){
+      numero += 2;
+      miArray.push(numero);
+    }
+    else{
+      miArray.push(numero);
+      continue;
+    }
+  }
+  return miArray;
 }
 
 
